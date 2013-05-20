@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/search_box"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <EditText
+            android:id="@+id/edt_search_word"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="3"
+            android:background="@drawable/search_input"
+            android:drawableLeft="@drawable/search"
+            android:drawableRight="@drawable/search_cancel"
+            android:hint="@string/search_word"
+            android:singleLine="true"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_search_selector"
+            android:text="@string/search" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/buttons"
+        android:layout_width="30dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/add_word"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/search_box" >
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="3dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/search_box"
+        android:layout_toLeftOf="@+id/buttons"
+        android:background="@drawable/devide_line" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/search_box"
+        android:layout_toLeftOf="@+id/line" >
+
+        <FrameLayout
+            android:id="@+id/dictionary_meaning_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <com.zhan_dui.dictionary.custom.VerticalTextView
+                android:id="@+id/verticalTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="柯林斯词典"
+                android:textColor="@color/white" />
+        </FrameLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/add_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-8dp"
+        android:src="@drawable/add_word_nor1" />
+
+</RelativeLayout>

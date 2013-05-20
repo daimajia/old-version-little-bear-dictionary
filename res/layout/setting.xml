@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/main_header_bg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/setting"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/lightblack" />
+    </RelativeLayout>
+
+    <com.mobeta.android.dslv.DragSortListView
+        android:id="@+id/drag_sort_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_item_devider"
+        android:dividerHeight="1dp" >
+    </com.mobeta.android.dslv.DragSortListView>
+
+    <TextView
+        android:id="@+id/settingHands"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drag_sort_list"
+        android:background="@color/gray"
+        android:drawableBottom="@drawable/devide_line"
+        android:drawableTop="@drawable/devide_line"
+        android:padding="5dp"
+        android:text="@string/settingHands"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/rightHand"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingHands"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/currentHandMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/settingRightHandMode"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/changeMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/setting" />
+
+        <!--
+             <ToggleButton
+            android:id="@+id/toggleRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textOff="@string/settingClose"
+            android:textOn="@string/settingOpen" />
+        -->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/devide1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rightHand"
+        android:background="@color/gray"
+        android:drawableBottom="@drawable/devide_line"
+        android:drawableTop="@drawable/devide_line"
+        android:padding="5dp"
+        android:text="@string/settingText"
+        android:textColor="@color/black" />
+
+    <View
+        android:id="@+id/devide0"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/devide1"
+        android:background="@drawable/devide_line" />
+
+    <RelativeLayout
+        android:id="@+id/settingSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devide0"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/settingSmall"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/setSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/setting"
+            android:textOff="@string/settingClose"
+            android:textOn="@string/settingOpen" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/devide2"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/settingSmall"
+        android:background="@drawable/devide_line" />
+
+    <RelativeLayout
+        android:id="@+id/settingMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devide2"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/settingMedium"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/setMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/setting"
+            android:textOff="@string/settingClose"
+            android:textOn="@string/settingOpen" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/devide3"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/settingMedium"
+        android:background="@drawable/devide_line" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devide3"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/settingLarge"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/setLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/setting"
+            android:textOff="@string/settingClose"
+            android:textOn="@string/settingOpen" />
+    </RelativeLayout>
+
+</RelativeLayout>

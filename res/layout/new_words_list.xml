@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!--
+    <ListView
+        android:id="@+id/new_words_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_item_devider" >
+    </ListView>
+    -->
+
+    <GridView
+        android:id="@+id/new_words_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:numColumns="2" >
+    </GridView>
+
+</RelativeLayout>
